@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 namespace FlightTracker.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class FlightController : ControllerBase
     {
         private static readonly Flight[] flights = new[]
@@ -25,9 +25,9 @@ namespace FlightTracker.Controllers
         }
 
         [HttpGet(Name = "GetAllFlights")]
-        public ActionResult<IEnumerable<Flight>> Get()
+        public async Task<ActionResult<List<Flight>>> Get()
         {
-            
+
             return Ok(flights);
 
         }

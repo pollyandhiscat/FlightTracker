@@ -1,6 +1,6 @@
 @FlightTracker_HostAddress = http://localhost:5141
 
-GET {{FlightTracker_HostAddress}}/flight/
+GET {{FlightTracker_HostAddress}}/api/flight/
 Accept: application/json
 
 ###

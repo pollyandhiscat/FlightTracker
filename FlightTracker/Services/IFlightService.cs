@@ -6,7 +6,7 @@ namespace FlightTracker.Services
     {
 
         Task<List<Flight>> GetAllFlightsAsync();
-        Task<Flight> GetFlightByIdAsync(int id);
+        Task<Flight?> GetFlightByIdAsync(int id);
         Task<Flight> AddFlightAsync(Flight flight);
         Task<bool> UpdateFlightAsync(int id);
         Task<bool> DeleteFlightAsync(int id);

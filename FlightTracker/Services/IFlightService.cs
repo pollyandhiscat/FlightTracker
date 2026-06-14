@@ -8,8 +8,8 @@ namespace FlightTracker.Services
 
         Task<List<FlightResponse>> GetAllFlightsAsync();
         Task<FlightResponse?> GetFlightByIdAsync(int id);
-        Task<FlightResponse> AddFlightAsync(Flight flight);
-        Task<bool> UpdateFlightAsync(int id);
+        Task<FlightResponse> CreateFlightAsync(CreateFlightRequest flight);
+        Task<bool> UpdateFlightAsync(int id, UpdateFlightRequest flight);
         Task<bool> DeleteFlightAsync(int id);
     }
 }

@@ -1,3 +1,4 @@
+using FlightTracker.DTO;
 using FlightTracker.Models;
 using FlightTracker.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,7 @@ namespace FlightTracker.Controllers
         }
 
         [HttpGet(Name = "GetAllFlights")]
-        public async Task<ActionResult<List<Flight>>> Get()
+        public async Task<ActionResult<List<FlightResponse>>> Get()
         {
 
             return Ok(await Service.GetAllFlightsAsync());

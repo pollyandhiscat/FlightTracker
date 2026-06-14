@@ -28,5 +28,21 @@ namespace FlightTracker.Controllers
             return Ok(await Service.GetAllFlightsAsync());
 
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<Flight?>>> GetById(int id)
+        {
+            
+            var flight = await Service.GetFlightByIdAsync(id);
+
+            if (flight == null)
+            {
+
+                return NotFound($"Flight with Id {id} does not exist.");
+            }
+
+            return Ok(flight);
+
+        }
     }
 }

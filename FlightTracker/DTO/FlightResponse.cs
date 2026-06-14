@@ -5,6 +5,7 @@ namespace FlightTracker.DTO
 {
     public class FlightResponse
     {
+        public int Id { get; set; }
         public string IcaoTypeCode { get; set; } = string.Empty;
         public string TailNumber { get; set; } = String.Empty;
         public string DepartureAirport { get; set; } = String.Empty;

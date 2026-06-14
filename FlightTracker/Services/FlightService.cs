@@ -20,10 +20,10 @@ namespace FlightTracker.Services
 
         }
 
-        public Task<Flight> GetFlightByIdAsync(int id)
+        public async Task<Flight?> GetFlightByIdAsync(int id)
         {
-
-            throw new NotImplementedException();
+            var flight = flights.FirstOrDefault(flight => flight.Id == id);
+            return await Task.FromResult(flight);
         }
 
         public Task<Flight> AddFlightAsync(Flight flight)
